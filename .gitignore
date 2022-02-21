@@ -1,3 +1,6 @@
-assets/icons
-assets/images
+node_modules
+dist
+assets
+
 todo.txt
+webpack.config.js
