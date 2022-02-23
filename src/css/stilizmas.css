@@ -6,7 +6,7 @@
 	--clr-neutral-100: #fff;
 	--clr-neutral-900: #222c2a;
 
-	--ff-primary: 'Roboto', sans-serif;
+	--ff-primary: 'robotas-reg', sans-serif;
 	--ff-accent: 'Playfair Display', serif;
 
 	/* 18px = 1.125rem*/
@@ -65,7 +65,8 @@ h3 {
 }
 
 h3 {
-	font-size: calc(var(--fs-base) * 1.5 * var(--fs-index-text));
+	/* font-size: calc(var(--fs-base) * 1.5 * var(--fs-index-text)); */
+	font-size: clamp(1rem, 10vw, 2.5rem);
 }
 
 h4 {
@@ -121,7 +122,6 @@ a {
 img {
 	display: block;
 	max-width: 100%;
-	height: auto;
 }
 
 button {
@@ -168,6 +168,16 @@ button {
 
 .padding-around-md {
 	padding: var(--cell-padding-md);
+}
+
+.padding-hover {
+	padding-top: 0.1em;
+}
+
+@media (min-width: 40em) {
+	.padding-hover {
+		padding-top: 1em;
+	}
 }
 
 .margin-bot-sm {
@@ -226,7 +236,7 @@ button {
 }
 
 .translate-up {
-	transform: translateY(12rem);
+	transform: translateY(13.5rem);
 }
 
 @media (min-width: 40em) {
@@ -237,7 +247,8 @@ button {
 
 /* COMPONENTS:*/
 /* -buttons*/
-.btn {
+.btn,
+.btn img {
 	width: 40px;
 	height: 40px;
 }
@@ -273,8 +284,11 @@ button {
 	position: fixed;
 	width: 100%;
 	z-index: 999;
-	top: -12rem;
+	top: -13.5rem;
 	background: var(--clr-primary-400);
+	/* background: green; */
+	/* border: 1px solid orange; */
+	/* height: 100%; */
 }
 
 @media (min-width: 40em) {
@@ -314,11 +328,6 @@ button {
 @media (min-width: 40em) {
 	.nav__link {
 		position: relative;
-		/* border: 1px solid green; */
-		/* background: var(--clr-primary-400); */
-		/* display: inline-block; */
-		/* border-bottom: 1px solid var(--clr-neutral-100); */
-		/* width: 100%; */
 		border-bottom: none;
 	}
 
@@ -358,7 +367,6 @@ button {
 	content: 'a web developer';
 	font-family: var(--ff-accent);
 	bottom: -20%;
-	/* font-size: clamp(3.5rem, 5vw, 5rem); */
 	left: 50%;
 	position: absolute;
 	transform: translateX(-50%);
@@ -402,6 +410,7 @@ button {
 }
 
 .project__image {
+	/* width: clamp(200px - 2px, 100% - 2px, 800px - 2px); */
 	margin: 1px;
 	width: calc(100% - 2px);
 	height: calc(100% - 2px);
@@ -415,16 +424,20 @@ button {
 .project__hover {
 	top: 0;
 	left: 0;
-	width: 100%;
+	margin: 1px;
+	/* width: clamp(200px - 2px, 100% - 2px, 800px - 2px); */
+	width: calc(100% - 2px);
 	height: calc(100% - 2px);
 	background: var(--clr-neutral-900);
 	color: var(--clr-neutral-100);
 	display: none;
 	opacity: 0.94;
-	margin: 1px;
-	width: calc(100% - 2px);
 	position: absolute;
 }
+
+/* .project__hover p { */
+/* 	font-size: clamp(0.8rem, 10vw, 1.5rem); */
+/* } */
 
 .project:hover .project__hover {
 	display: flex;
@@ -469,7 +482,7 @@ button {
 /* LAYOUT*/
 /* -container*/
 .container {
-	margin-inline: auto;
+	margin: auto;
 	width: min(90%, 70.5rem);
 }
 

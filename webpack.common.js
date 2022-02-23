@@ -1,20 +1,34 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-	entry: ['./src/js/main.js', './src/css/main.css'],
-
-	plugins: [
-		new HtmlWebpackPlugin({
-			template: './src/template.html',
-		}),
-	],
+	entry: ['./src/js/main.js', './src/css/stilizmas.css'],
+	// entry: {
+	// 	supercool: './src/js/main.js',
+	// 	stiliuskas: './src/css/stilizmas.css',
+	// },
 
 	module: {
 		rules: [
 			{
-				test: /\.css$/,
-				use: ['style-loader', 'css-loader', 'postcss-loader'],
+				test: /\.html$/,
+				loader: 'html-srcsets-loader',
+				options: {
+					attrs: ['img:src', ':srcset'],
+				},
+			},
+
+			{
+				test: /\.(svg|png|jpg|gif|webp)$/,
+				exclude: [/node_modules/],
+				use: {
+					loader: 'file-loader',
+					options: {
+						esModule: false,
+						name: '[name].[hash].[ext]',
+						outputPath: 'foto',
+					},
+				},
+				type: 'javascript/auto',
 			},
 		],
 	},
