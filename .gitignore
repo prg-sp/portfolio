@@ -1,5 +1,5 @@
-assets/icons
-assets/images
+node_modules
+assets
 dist
-todo.txt
+trash
 
