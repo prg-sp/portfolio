@@ -18,6 +18,7 @@
 		"file-loader": "^6.2.0",
 		"html-srcsets-loader": "^0.5.1",
 		"html-webpack-plugin": "^5.5.0",
+		"image-webpack-loader": "^8.1.0",
 		"mini-css-extract-plugin": "^2.5.3",
 		"postcss-loader": "^6.2.1",
 		"sass": "^1.49.8",
