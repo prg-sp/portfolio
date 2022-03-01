@@ -3,6 +3,7 @@
 	"version": "1.0.0",
 	"description": "",
 	"scripts": {
+		"pages": "gh-pages -b pages -d dist",
 		"start": "webpack-dev-server --config webpack.dev.js --open",
 		"build": "webpack --config webpack.prod.js"
 	},
@@ -16,6 +17,7 @@
 		"css-minimizer-webpack-plugin": "^3.4.1",
 		"extract-loader": "^5.1.0",
 		"file-loader": "^6.2.0",
+		"gh-pages": "^3.2.3",
 		"html-srcsets-loader": "^0.5.1",
 		"html-webpack-plugin": "^5.5.0",
 		"image-webpack-loader": "^8.1.0",
