@@ -66,7 +66,7 @@ h3 {
 
 h3 {
 	/* font-size: calc(var(--fs-base) * 1.5 * var(--fs-index-text)); */
-	font-size: clamp(1rem, 10vw, 2.5rem);
+	font-size: clamp(1rem, 5vw, 1.5rem);
 }
 
 h4 {
@@ -76,7 +76,7 @@ h4 {
 li,
 p {
 	font-family: var(--ff-accent);
-	font-size: calc(var(--fs-base) * var(--fs-index-text));
+	/* font-size: calc(var(--fs-base) * var(--fs-index-text)); */
 	color: var(--clr-neutral-100);
 }
 
@@ -394,7 +394,6 @@ button {
 	border: 0.5em solid var(--clr-neutral-900);
 	border-radius: 2px;
 	box-shadow: 1px 1px 2px var(--clr-neutral-900);
-	cursor: pointer;
 	position: relative;
 }
 

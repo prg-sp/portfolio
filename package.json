@@ -2,8 +2,10 @@
 	"name": "1_portfolio_css",
 	"version": "1.0.0",
 	"description": "",
+	"homepage": "https://prg-sp.github.com/portfolio",
 	"scripts": {
-		"pages": "gh-pages -b pages -d dist",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -b gh-pages -d dist",
 		"start": "webpack-dev-server --config webpack.dev.js --open",
 		"build": "webpack --config webpack.prod.js"
 	},
