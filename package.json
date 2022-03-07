@@ -2,7 +2,7 @@
 	"name": "1_portfolio_css",
 	"version": "1.0.0",
 	"description": "",
-	"homepage": "https://prg-sp.github.com/portfolio",
+	"homepage": "https://prg-sp.github.io/portfolio",
 	"scripts": {
 		"predeploy": "npm run build",
 		"deploy": "gh-pages -b gh-pages -d dist",
