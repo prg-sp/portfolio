@@ -245,6 +245,24 @@ button {
 	}
 }
 
+/* LAYOUT*/
+/* -container*/
+.container {
+	margin: auto;
+	width: min(90%, 70.5rem);
+}
+
+.container--narrow {
+	max-width: 50rem;
+}
+
+/* -grid*/
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+	grid-gap: 1em;
+}
+
 /* COMPONENTS:*/
 /* -buttons*/
 .btn,
@@ -476,24 +494,6 @@ button {
 	width: 80%;
 	height: 0.2rem;
 	background: white;
-}
-
-/* LAYOUT*/
-/* -container*/
-.container {
-	margin: auto;
-	width: min(90%, 70.5rem);
-}
-
-.container--narrow {
-	max-width: 50rem;
-}
-
-/* -grid*/
-.grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
-	grid-gap: 1em;
 }
 
 /* -footer*/
